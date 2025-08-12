@@ -1,17 +1,17 @@
 import { type FC } from 'react';
 import type { Cocktail } from '../DrinkList/DrinkList';
-import { DrinkPhoto, Wrapper } from './DrinkCard.styles';
+import { DrinkPhoto, Title, Wrapper } from './DrinkCard.styles';
 
 interface Props {
   alignToRight?: boolean;
   cocktail: Cocktail;
 }
 
-export const DrinkCard: FC<Props> = ({ cocktail }) => {
+export const DrinkCard: FC<Props> = ({ cocktail, alignToRight }) => {
   const { name, image, ingredients } = cocktail || {};
   return (
-    <Wrapper>
-      <h3>{name}</h3>
+    <Wrapper $alignToRight={alignToRight}>
+      <Title>{name}</Title>
       <DrinkPhoto src={image} />
       {ingredients}
     </Wrapper>
