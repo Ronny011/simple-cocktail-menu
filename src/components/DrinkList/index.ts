@@ -1,1 +1,1 @@
-export { DrinkList } from './DrinkList';
+export { DrinkList, type Cocktail } from './DrinkList';

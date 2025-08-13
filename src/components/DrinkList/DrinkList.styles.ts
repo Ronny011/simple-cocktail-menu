@@ -15,10 +15,15 @@ export const Separator = styled.hr`
   border: none;
   height: 1px;
   width: 100%;
+
   @media (prefers-color-scheme: light) {
-    background: linear-gradient(to right, var(--light), var(--dark), var(--light));
+    background: linear-gradient(to right, var(--light), var(--dark-text), var(--light));
   }
   @media (prefers-color-scheme: dark) {
-    background: linear-gradient(to right, var(--dark), var(--light), var(--dark));
+    background: linear-gradient(to right, var(--dark-text), var(--light), var(--dark-text));
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 70%;
   }
 `;
