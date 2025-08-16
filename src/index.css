@@ -1,7 +1,23 @@
 @font-face {
   font-family: 'bodoni';
   src: url('/fonts/Playfair.ttf') format('truetype');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'tinos-hebrew';
+  src: url('/fonts/Tinos-Regular.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'tinos-hebrew';
+  src: url('/fonts/Tinos-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -11,7 +27,7 @@
   --dark-text: #213547;
   --light: #e8e8e8;
   --light-text: rgba(255, 255, 255, 0.87);
-  font-family: 'bodoni', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'bodoni', 'tinos-hebrew', Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

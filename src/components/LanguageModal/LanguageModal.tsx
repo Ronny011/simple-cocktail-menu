@@ -1,10 +1,11 @@
-import type { Dispatch, FC, SetStateAction } from 'react';
+import type { FC } from 'react';
 import { createPortal } from 'react-dom';
-import { Backdrop, Button, Card } from './LanguageModal.styles';
+import { Backdrop, Card } from './LanguageModal.styles';
 import { type Language, usePersistentLanguage } from '../../store/usePersistentLanguage';
+import { Button } from '../../util/globals.styles';
 
 interface Props {
-  modalState: [boolean, Dispatch<SetStateAction<boolean>>];
+  modalState: [boolean, (isModalOpen: boolean) => void];
 }
 
 export const LanguageModal: FC<Props> = ({ modalState }) => {

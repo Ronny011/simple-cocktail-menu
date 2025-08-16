@@ -3,7 +3,7 @@ import { Language } from '../store/usePersistentLanguage';
 
 type CockTailsPerLanguage = { [key in Language]: Cocktail[] };
 
-const cocktailImages = {
+export const cocktailImages = {
   newYorkSour:
     'https://www.liquor.com/thmb/R_VZp5FxTfeWJiJB3Jl_JMkt_Do=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ny-sour-720x720-primary-v2-cfbf5e7a8536466ba059d9e678ba16bc.jpg',
   londonMule: 'https://bakerbynature.com/wp-content/uploads/2021/03/The-Best-Moscow-Mule-Recipe-3-1-of-1.jpg',
@@ -22,7 +22,7 @@ const cocktailImages = {
     'https://www.liquor.com/thmb/oDoPTN5eOOLdSE1lpYhfTRos5Vk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-white-and-night-720x720-primary-2504e8f315314e6fbfe980dccbc765a7.jpg'
 };
 
-const baseBadges = {
+export const baseBadges = {
   bourbon: 'https://www.woodfordreserve.com/wp-content/uploads/2019/12/Holiday-Bottle.png',
   gingerBeer: 'https://fevertree.s3.eu-west-2.amazonaws.com/thumbs/500x1200e/f4d31fd2467d7fc37337ac906521af1f.png',
   gin: 'https://ik.imagekit.io/cvygf2xse/beefeatergin/wp-content/uploads/2022/10/Beefeater-London-Dry-Gin-front-view-aspect-ratio-189-599-1.png?tr=q-80,w-340',
@@ -43,55 +43,64 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       name: 'New Your Sour',
       imageUrl: cocktailImages.newYorkSour,
       ingredients: 'Bourbon, Sour and Red wine',
-      baseBadgeUrl: baseBadges.bourbon
+      baseBadgeUrl: baseBadges.bourbon,
+      tags: ['sour', 'strong']
     },
     {
       name: 'London Mule',
       imageUrl: cocktailImages.londonMule,
       ingredients: 'Gin, Lime and Ginger Beer',
-      baseBadgeUrl: baseBadges.gingerBeer
+      baseBadgeUrl: baseBadges.gingerBeer,
+      tags: ['refreshing', 'spicy']
     },
     {
       name: 'Gin & Tonic',
       imageUrl: cocktailImages.ginTonic,
       ingredients: 'See title',
-      baseBadgeUrl: baseBadges.gin
+      baseBadgeUrl: baseBadges.gin,
+      tags: ['refreshing', 'classic']
     },
     {
       name: 'Mai Tai',
       imageUrl: cocktailImages.maiTai,
       ingredients: 'Rum, Lime and Almond Syrup',
-      baseBadgeUrl: baseBadges.rum
+      baseBadgeUrl: baseBadges.rum,
+      tags: ['sweet', 'tropical']
     },
     {
       name: 'Negroni',
       imageUrl: cocktailImages.negroni,
       ingredients: 'Campari, Gin and Red Vermouth',
-      baseBadgeUrl: baseBadges.campari
+      baseBadgeUrl: baseBadges.campari,
+      tags: ['bitter', 'classic']
     },
     {
       name: 'Midori Shower',
       imageUrl: cocktailImages.midoriShower,
       ingredients: 'Midori, Chartreuse and Sour',
-      baseBadgeUrl: baseBadges.midori
+      baseBadgeUrl: baseBadges.midori,
+      tags: ['sour', 'fruity']
     },
     {
       name: 'Paloma',
       imageUrl: cocktailImages.paloma,
       ingredients: 'Tequila, Lime and Grapefruit Soda',
-      baseBadgeUrl: baseBadges.tequila
+      baseBadgeUrl: baseBadges.tequila,
+      tags: ['refreshing', 'citrusy']
     },
     {
       name: "Bee's Knees",
       imageUrl: cocktailImages.beesKnees,
       ingredients: 'Gin, Honey, Lemon and Cointreau',
-      baseBadgeUrl: baseBadges.cointreau
+      baseBadgeUrl: baseBadges.cointreau,
+      tags: ['sweet', 'classic']
     },
     {
       name: 'Red, White & Night',
       imageUrl: cocktailImages.redWhiteNight,
       ingredients: 'Red Wine, Gin and Sour',
-      baseBadgeUrl: baseBadges.wine
+      baseBadgeUrl: baseBadges.wine,
+      tags: ['sour', 'wine-based']
     }
   ],
   he: [
@@ -99,55 +108,64 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       name: 'ניו יורק סאוור',
       imageUrl: cocktailImages.newYorkSour,
       ingredients: 'בורבון, סאוור ויין אדום',
-      baseBadgeUrl: baseBadges.bourbon
+      baseBadgeUrl: baseBadges.bourbon,
+      tags: ['חמוץ', 'חזק']
     },
     {
       name: 'לונדון מיול',
       imageUrl: cocktailImages.londonMule,
       ingredients: "ג'ין, ליים ובירת ג'ינג'ר",
-      baseBadgeUrl: baseBadges.gingerBeer
+      baseBadgeUrl: baseBadges.gingerBeer,
+      tags: ['מרענן', 'חריף']
     },
     {
       name: "ג'ין טוניק",
       imageUrl: cocktailImages.ginTonic,
       ingredients: 'ראה כותרת',
-      baseBadgeUrl: baseBadges.gin
+      baseBadgeUrl: baseBadges.gin,
+      tags: ['מרענן', 'קלאסי']
     },
     {
       name: 'מאי טאי',
       imageUrl: cocktailImages.maiTai,
       ingredients: 'רום, ליים וסירופ שקדים',
-      baseBadgeUrl: baseBadges.rum
+      baseBadgeUrl: baseBadges.rum,
+      tags: ['מתוק', 'טרופי']
     },
     {
       name: 'נגרוני',
       imageUrl: cocktailImages.negroni,
       ingredients: "קמפרי, ג'ין ורמוט אדום",
-      baseBadgeUrl: baseBadges.campari
+      baseBadgeUrl: baseBadges.campari,
+      tags: ['מר', 'קלאסי']
     },
     {
       name: 'מידורי שאוור',
       imageUrl: cocktailImages.midoriShower,
       ingredients: 'מידורי, שארטרז וסאוור',
-      baseBadgeUrl: baseBadges.midori
+      baseBadgeUrl: baseBadges.midori,
+      tags: ['חמוץ', 'פירותי']
     },
     {
       name: 'פלומה',
       imageUrl: cocktailImages.paloma,
       ingredients: 'טקילה, ליים וסודה אשכוליות',
-      baseBadgeUrl: baseBadges.tequila
+      baseBadgeUrl: baseBadges.tequila,
+      tags: ['מרענן', 'הדרי']
     },
     {
       name: 'ברכי הדבורה',
       imageUrl: cocktailImages.beesKnees,
       ingredients: "ג'ין, דבש, לימון וקואנטרו",
-      baseBadgeUrl: baseBadges.cointreau
+      baseBadgeUrl: baseBadges.cointreau,
+      tags: ['מתוק', 'קלאסי']
     },
     {
       name: 'לילה אדום-לבן',
       imageUrl: cocktailImages.redWhiteNight,
       ingredients: "יין אדום, ג'ין וסאוור",
-      baseBadgeUrl: baseBadges.wine
+      baseBadgeUrl: baseBadges.wine,
+      tags: ['חמוץ', 'על בסיס יין']
     }
   ],
   ru: [
@@ -155,55 +173,64 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       name: 'Нью-Йорк Сауэр',
       imageUrl: cocktailImages.newYorkSour,
       ingredients: 'Бурбон, кислый микс и красное вино',
-      baseBadgeUrl: baseBadges.bourbon
+      baseBadgeUrl: baseBadges.bourbon,
+      tags: ['кислый', 'крепкий']
     },
     {
       name: 'Лондон Мюл',
       imageUrl: cocktailImages.londonMule,
       ingredients: 'Джин, лайм и имбирное пиво',
-      baseBadgeUrl: baseBadges.gingerBeer
+      baseBadgeUrl: baseBadges.gingerBeer,
+      tags: ['освежающий', 'острый']
     },
     {
       name: 'Джин-тоник',
       imageUrl: cocktailImages.ginTonic,
       ingredients: 'См. название',
-      baseBadgeUrl: baseBadges.gin
+      baseBadgeUrl: baseBadges.gin,
+      tags: ['освежающий', 'классический']
     },
     {
       name: 'Май Тай',
       imageUrl: cocktailImages.maiTai,
       ingredients: 'Ром, лайм и миндальный сироп',
-      baseBadgeUrl: baseBadges.rum
+      baseBadgeUrl: baseBadges.rum,
+      tags: ['сладкий', 'тропический']
     },
     {
       name: 'Негрони',
       imageUrl: cocktailImages.negroni,
       ingredients: 'Кампари, джин и красный вермут',
-      baseBadgeUrl: baseBadges.campari
+      baseBadgeUrl: baseBadges.campari,
+      tags: ['горький', 'классический']
     },
     {
       name: 'Мидори Шауэр',
       imageUrl: cocktailImages.midoriShower,
       ingredients: 'Мидори, Шартрез и кислый микс',
-      baseBadgeUrl: baseBadges.midori
+      baseBadgeUrl: baseBadges.midori,
+      tags: ['кислый', 'фруктовый']
     },
     {
       name: 'Палома',
       imageUrl: cocktailImages.paloma,
       ingredients: 'Текила, лайм и грейпфрутовая газировка',
-      baseBadgeUrl: baseBadges.tequila
+      baseBadgeUrl: baseBadges.tequila,
+      tags: ['освежающий', 'цитрусовый']
     },
     {
       name: 'Пчелиные коленки',
       imageUrl: cocktailImages.beesKnees,
       ingredients: 'Джин, мед, лимон и Куантро',
-      baseBadgeUrl: baseBadges.cointreau
+      baseBadgeUrl: baseBadges.cointreau,
+      tags: ['сладкий', 'классический']
     },
     {
       name: 'Красный, белый и ночь',
       imageUrl: cocktailImages.redWhiteNight,
       ingredients: 'Красное вино, джин и кислый микс',
-      baseBadgeUrl: baseBadges.wine
+      baseBadgeUrl: baseBadges.wine,
+      tags: ['кислый', 'на основе вина']
     }
   ],
   '': []
@@ -213,5 +240,45 @@ export const titlePerLanguage = {
   en: 'Choose your cocktail 🍸',
   he: 'בחר את הקוקטייל שלך 🍸',
   ru: 'Выберите ваш коктейль 🍸',
+  '': []
+};
+
+export const tags = {
+  en: [
+    'sour',
+    'strong',
+    'refreshing',
+    'spicy',
+    'classic',
+    'sweet',
+    'tropical',
+    'bitter',
+    'fruity',
+    'citrusy',
+    'wine-based',
+    'all'
+  ],
+  he: ['חמוץ', 'חזק', 'מרענן', 'חריף', 'קלאסי', 'מתוק', 'טרופי', 'מר', 'פירותי', 'הדרי', 'על בסיס יין', 'הכל'],
+  ru: [
+    'кислый',
+    'крепкий',
+    'освежающий',
+    'острый',
+    'классический',
+    'сладкий',
+    'тропический',
+    'горький',
+    'фруктовый',
+    'цитрусовый',
+    'на основе вина',
+    'все'
+  ],
+  '': []
+};
+
+export const filterByTagTitle = {
+  en: 'Filter by tag 🏷️',
+  he: 'סינון לפי תג 🏷️',
+  ru: 'Фильтр по тегу 🏷️',
   '': []
 };

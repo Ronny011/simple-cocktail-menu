@@ -13,26 +13,8 @@ export const Card = styled.div`
   border-radius: 15px;
   padding: 15px 0 15px 0;
 
-  @media (prefers-color-scheme: light) {
-    background-color: var(--dark-text);
-    color: var(--light);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--light);
-    color: var(--dark-text);
-  }
-`;
-
-export const Button = styled.button`
-  color: inherit;
-  background: none;
-  border: none;
-  width: 150px;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 15px 0 15px 0;
-  cursor: pointer;
+  background-color: var(--light);
+  color: var(--dark-text);
 `;
 
 export const Backdrop = styled.div`

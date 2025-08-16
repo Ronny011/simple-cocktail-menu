@@ -2,35 +2,38 @@ import { DrinkCard } from '../DrinkCard';
 import { Separator, Wrapper } from './DrinkList.styles';
 import { cocktailsPerLanguage, titlePerLanguage } from '../../util/consntants';
 import { usePersistentLanguage } from '../../store/usePersistentLanguage';
+import { Fragment } from 'react/jsx-runtime';
 
 export type Cocktail = {
   name: string;
   imageUrl: string;
   ingredients: string;
   baseBadgeUrl?: string;
+  tags?: string[];
 };
 
-export const DrinkList = () => {
+export const DrinkList = ({ filter }: { filter: string }) => {
   const { language } = usePersistentLanguage();
   const cocktails = cocktailsPerLanguage[language];
 
   return (
     <>
-      <h1>{titlePerLanguage[language]}</h1>
+      <h2>{titlePerLanguage[language]}</h2>
       <Wrapper>
-        {cocktails.map((cocktail, index) => {
-          const isLastCard = index === cocktails.length - 1;
-          return (
-            <>
-              <DrinkCard
-                key={index}
-                cocktail={cocktail}
-                alignToRight={Boolean(index % 2)}
-              />
-              {!isLastCard && <Separator />}
-            </>
-          );
-        })}
+        {cocktails
+          .filter((cocktail) => !filter || cocktail.tags?.includes(filter))
+          .map((cocktail, index) => {
+            const isLastCard = index === cocktails.length - 1;
+            return (
+              <Fragment key={index}>
+                <DrinkCard
+                  cocktail={cocktail}
+                  alignToRight={Boolean(index % 2)}
+                />
+                {!isLastCard && <Separator />}
+              </Fragment>
+            );
+          })}
       </Wrapper>
     </>
   );
