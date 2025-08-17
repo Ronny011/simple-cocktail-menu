@@ -4,13 +4,13 @@ import { DrinkList } from './components/DrinkList';
 import { LanguageModal } from './components/LanguageModal';
 import { usePersistentLanguage } from './store/usePersistentLanguage';
 import { preload } from 'react-dom';
-import { baseBadges, cocktailImages } from './util/consntants';
+import { ingredientImages, cocktailImages } from './util/consntants';
 import { FloaterButton } from './components/FloaterButton';
 import { FloaterMenu } from './components/FloaterMenu';
 
 const preloading = () => {
   Object.values(cocktailImages).map((cocktailImage) => preload(cocktailImage, { as: 'image' }));
-  Object.values(baseBadges).map((baseBadge) => preload(baseBadge, { as: 'image' }));
+  Object.values(ingredientImages).map((baseBadge) => preload(baseBadge, { as: 'image' }));
 };
 
 export const App = () => {

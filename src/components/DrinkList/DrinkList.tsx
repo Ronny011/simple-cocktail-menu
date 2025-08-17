@@ -8,7 +8,7 @@ export type Cocktail = {
   name: string;
   imageUrl: string;
   ingredients: string;
-  baseBadgeUrl?: string;
+  ingredientUrls: string[];
   tags?: string[];
 };
 

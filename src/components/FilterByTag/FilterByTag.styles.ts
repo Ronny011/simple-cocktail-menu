@@ -13,7 +13,7 @@ export const Tag = styled.button<{ $index: number }>`
   padding: 5px 12px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 15px;
 `;
 
 export const Tags = styled.div`
