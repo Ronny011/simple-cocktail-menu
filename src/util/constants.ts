@@ -19,7 +19,10 @@ export const cocktailImages = {
     'https://www.southernliving.com/thmb/pn9NrRsTpG-U1xpRyIN90C5wcJw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Southern-Living-Paloma--Step-4-1769-84d74c08ebca4c0fba05cbce1d75c3d3.jpg',
   beesKnees: 'https://www.girlversusdough.com/wp-content/uploads/2021/04/bees-knees-cocktail-3-600x900.jpg',
   redWhiteNight:
-    'https://www.liquor.com/thmb/oDoPTN5eOOLdSE1lpYhfTRos5Vk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-white-and-night-720x720-primary-2504e8f315314e6fbfe980dccbc765a7.jpg'
+    'https://www.liquor.com/thmb/oDoPTN5eOOLdSE1lpYhfTRos5Vk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-white-and-night-720x720-primary-2504e8f315314e6fbfe980dccbc765a7.jpg',
+  debbieDont:
+    'https://images.squarespace-cdn.com/content/v1/62503525c8ea875b7ae0638e/1675706955754-DDFZOSMMUUHN3ACCJ6W1/Debbie+Don%27t+2.jpg',
+  copenhagen: 'https://i.ibb.co/TntfJwt/Copenhagen-96dpi-682x1024px-J-NR-9509-540x810.png'
 };
 
 export const ingredientImages = {
@@ -38,7 +41,9 @@ export const ingredientImages = {
   tonic: 'https://fevertree.s3.eu-west-2.amazonaws.com/thumbs/500x1200e/f4d31fd2467d7fc37337ac906521af1f.png',
   orgeat: 'https://www.bennettopie.com/cdn/shop/products/Almond-70cl-HD.png?v=1673364180',
   chartreuse: 'https://d3f6h8s0w402y5.cloudfront.net/shared/product/400/Z39967102924.png',
-  grapefruitSoda: 'https://fevertree.s3.eu-west-2.amazonaws.com/thumbs/500x1200e/74754a202d90deba3c3b25ab99b954f8.png'
+  grapefruitSoda: 'https://fevertree.s3.eu-west-2.amazonaws.com/thumbs/500x1200e/74754a202d90deba3c3b25ab99b954f8.png',
+  cynar: 'https://alchemy-asia.com/th/wp-content/uploads/sites/4/2019/05/Cynar-1.png',
+  heering: 'https://i.ibb.co/Y7ZnPysy/HEERING-Cherry-Liqueur-750ml-564x1463px-J-NR-10469-312x810.png'
 };
 
 export const cocktailsPerLanguage: CockTailsPerLanguage = {
@@ -48,7 +53,7 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.newYorkSour,
       ingredients: 'Bourbon, Sour and Red wine',
       ingredientUrls: [ingredientImages.bourbon, ingredientImages.wine],
-      tags: ['sour', 'strong']
+      tags: ['sour', 'strong', 'contains wine']
     },
     {
       name: 'London Mule',
@@ -56,6 +61,13 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       ingredients: 'Gin, Lime and Ginger Beer',
       ingredientUrls: [ingredientImages.gin, ingredientImages.gingerBeer],
       tags: ['refreshing', 'spicy']
+    },
+    {
+      name: 'Copenhagen',
+      imageUrl: cocktailImages.copenhagen,
+      ingredients: 'Cherry Liqueur, Gin and Lime Sour',
+      ingredientUrls: [ingredientImages.heering, ingredientImages.gin],
+      tags: ['refreshing', 'classic', 'sour', 'fruity']
     },
     {
       name: 'Gin & Tonic',
@@ -69,7 +81,7 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.maiTai,
       ingredients: 'Rum, Lime and Almond Syrup',
       ingredientUrls: [ingredientImages.rum, ingredientImages.orgeat],
-      tags: ['sweet', 'tropical']
+      tags: ['sweet', 'tropical', 'strong']
     },
     {
       name: 'Negroni',
@@ -97,14 +109,21 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.beesKnees,
       ingredients: 'Gin, Honey, Lemon and Cointreau',
       ingredientUrls: [ingredientImages.gin, ingredientImages.cointreau],
-      tags: ['sweet', 'classic']
+      tags: ['sweet', 'classic', 'strong']
     },
     {
       name: 'Red, White & Night',
       imageUrl: cocktailImages.redWhiteNight,
       ingredients: 'Red Wine, Gin and Sour',
       ingredientUrls: [ingredientImages.wine, ingredientImages.gin],
-      tags: ['sour', 'wine-based']
+      tags: ['sour', 'contains wine']
+    },
+    {
+      name: "Debbie, Don't",
+      imageUrl: cocktailImages.debbieDont,
+      ingredients: 'Reposado Tequila, Cynar, Lemon Juice and Maple Syrup',
+      ingredientUrls: [ingredientImages.tequila, ingredientImages.cynar],
+      tags: ['bitter']
     }
   ],
   he: [
@@ -113,7 +132,7 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.newYorkSour,
       ingredients: 'בורבון, סאוור ויין אדום',
       ingredientUrls: [ingredientImages.bourbon, ingredientImages.wine],
-      tags: ['חמוץ', 'חזק']
+      tags: ['חמוץ', 'חזק', 'מכיל יין']
     },
     {
       name: 'לונדון מיול',
@@ -121,6 +140,13 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       ingredients: "ג'ין, ליים ובירת ג'ינג'ר",
       ingredientUrls: [ingredientImages.gin, ingredientImages.gingerBeer],
       tags: ['מרענן', 'חריף']
+    },
+    {
+      name: 'קופנהגן',
+      imageUrl: cocktailImages.copenhagen,
+      ingredients: "ליקר דובדבן, ג'ין וסאוור ליים",
+      ingredientUrls: [ingredientImages.heering, ingredientImages.gin],
+      tags: ['מרענן', 'קלאסי', 'חמוץ', 'פירותי']
     },
     {
       name: "ג'ין טוניק",
@@ -134,7 +160,7 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.maiTai,
       ingredients: 'רום, ליים וסירופ שקדים',
       ingredientUrls: [ingredientImages.rum, ingredientImages.orgeat],
-      tags: ['מתוק', 'טרופי']
+      tags: ['מתוק', 'טרופי', 'חזק']
     },
     {
       name: 'נגרוני',
@@ -162,14 +188,21 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.beesKnees,
       ingredients: "ג'ין, דבש, לימון וקואנטרו",
       ingredientUrls: [ingredientImages.gin, ingredientImages.cointreau],
-      tags: ['מתוק', 'קלאסי']
+      tags: ['מתוק', 'קלאסי', 'חזק']
     },
     {
       name: 'לילה אדום-לבן',
       imageUrl: cocktailImages.redWhiteNight,
       ingredients: "יין אדום, ג'ין וסאוור",
       ingredientUrls: [ingredientImages.wine, ingredientImages.gin],
-      tags: ['חמוץ', 'על בסיס יין']
+      tags: ['חמוץ', 'מכיל יין']
+    },
+    {
+      name: 'דבי, אל תעשי',
+      imageUrl: cocktailImages.debbieDont,
+      ingredients: "טקילה רפוסדו, צ'ינאר, מיץ לימון וסירופ מייפל",
+      ingredientUrls: [ingredientImages.tequila, ingredientImages.cynar],
+      tags: ['מר']
     }
   ],
   ru: [
@@ -178,7 +211,7 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.newYorkSour,
       ingredients: 'Бурбон, кислый микс и красное вино',
       ingredientUrls: [ingredientImages.bourbon, ingredientImages.wine],
-      tags: ['кислый', 'крепкий']
+      tags: ['кислый', 'крепкий', 'содержит вино']
     },
     {
       name: 'Лондон Мюл',
@@ -186,6 +219,13 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       ingredients: 'Джин, лайм и имбирное пиво',
       ingredientUrls: [ingredientImages.gin, ingredientImages.gingerBeer],
       tags: ['освежающий', 'острый']
+    },
+    {
+      name: 'Копенгаген',
+      imageUrl: cocktailImages.copenhagen,
+      ingredients: 'Вишневый ликер, джин и лаймовый сауэр',
+      ingredientUrls: [ingredientImages.heering, ingredientImages.gin],
+      tags: ['освежающий', 'классический', 'кислый', 'фруктовый']
     },
     {
       name: 'Джин-тоник',
@@ -199,7 +239,7 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.maiTai,
       ingredients: 'Ром, лайм и миндальный сироп',
       ingredientUrls: [ingredientImages.rum, ingredientImages.orgeat],
-      tags: ['сладкий', 'тропический']
+      tags: ['сладкий', 'тропический', 'крепкий']
     },
     {
       name: 'Негрони',
@@ -227,14 +267,21 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       imageUrl: cocktailImages.beesKnees,
       ingredients: 'Джин, мед, лимон и Куантро',
       ingredientUrls: [ingredientImages.gin, ingredientImages.cointreau],
-      tags: ['сладкий', 'классический']
+      tags: ['сладкий', 'классический', 'крепкий']
     },
     {
       name: 'Красный, белый и ночь',
       imageUrl: cocktailImages.redWhiteNight,
       ingredients: 'Красное вино, джин и кислый микс',
       ingredientUrls: [ingredientImages.wine, ingredientImages.gin],
-      tags: ['кислый', 'на основе вина']
+      tags: ['кислый', 'содержит вино']
+    },
+    {
+      name: 'Дебби, не надо',
+      imageUrl: cocktailImages.debbieDont,
+      ingredients: 'Репосадо текила, Цинар, лимонный сок и кленовый сироп',
+      ingredientUrls: [ingredientImages.tequila, ingredientImages.cynar],
+      tags: ['горький']
     }
   ],
   '': []
@@ -258,10 +305,10 @@ export const tags = {
     'tropical',
     'bitter',
     'fruity',
-    'wine-based',
+    'contains wine',
     'all'
   ],
-  he: ['חמוץ', 'חזק', 'מרענן', 'חריף', 'קלאסי', 'מתוק', 'טרופי', 'מר', 'פירותי', 'על בסיס יין', 'הכל'],
+  he: ['חמוץ', 'חזק', 'מרענן', 'חריף', 'קלאסי', 'מתוק', 'טרופי', 'מר', 'פירותי', 'מכיל יין', 'הכל'],
   ru: [
     'кислый',
     'крепкий',
@@ -272,7 +319,7 @@ export const tags = {
     'тропический',
     'горький',
     'фруктовый',
-    'на основе вина',
+    'содержит вино',
     'все'
   ],
   '': []

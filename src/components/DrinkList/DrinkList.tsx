@@ -1,6 +1,6 @@
 import { DrinkCard } from '../DrinkCard';
 import { Separator, Wrapper } from './DrinkList.styles';
-import { cocktailsPerLanguage, titlePerLanguage } from '../../util/consntants';
+import { cocktailsPerLanguage, titlePerLanguage } from '../../util/constants';
 import { usePersistentLanguage } from '../../store/usePersistentLanguage';
 import { Fragment } from 'react/jsx-runtime';
 

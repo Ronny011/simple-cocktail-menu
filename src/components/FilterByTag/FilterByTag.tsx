@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { usePersistentLanguage } from '../../store/usePersistentLanguage';
-import { filterByTagTitle, tags } from '../../util/consntants';
+import { filterByTagTitle, tags } from '../../util/constants';
 import { Tag, Tags, Title } from './FilterByTag.styles';
 
 interface Props {

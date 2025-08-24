@@ -4,7 +4,7 @@ import { DrinkList } from './components/DrinkList';
 import { LanguageModal } from './components/LanguageModal';
 import { usePersistentLanguage } from './store/usePersistentLanguage';
 import { preload } from 'react-dom';
-import { ingredientImages, cocktailImages } from './util/consntants';
+import { ingredientImages, cocktailImages } from './util/constants';
 import { FloaterButton } from './components/FloaterButton';
 import { FloaterMenu } from './components/FloaterMenu';
 
