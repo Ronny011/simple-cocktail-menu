@@ -211,6 +211,13 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       ingredients: "טקילה רפוסדו, צ'ינאר, מיץ לימון וסירופ מייפל",
       ingredientUrls: [ingredientImages.tequila, ingredientImages.cynar],
       tags: ['מר']
+    },
+    {
+      name: 'אוזטה',
+      imageUrl: cocktailImages.ouzetta,
+      ingredients: 'ערק לואיזה, אורז׳ה וסאוור',
+      ingredientUrls: [],
+      tags: ['חמוץ', 'מרענן', 'אניס']
     }
   ],
   ru: [
@@ -290,6 +297,13 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       ingredients: 'Репосадо текила, Цинар, лимонный сок и кленовый сироп',
       ingredientUrls: [ingredientImages.tequila, ingredientImages.cynar],
       tags: ['горький']
+    },
+    {
+      name: 'Узетта',
+      imageUrl: cocktailImages.ouzetta,
+      ingredients: 'Арак Луиза, Оржат и кислый микс',
+      ingredientUrls: [],
+      tags: ['кислый', 'освежающий', 'анис']
     }
   ],
   '': []
@@ -317,7 +331,7 @@ export const tags = {
     'anise',
     'all'
   ],
-  he: ['חמוץ', 'חזק', 'מרענן', 'חריף', 'קלאסי', 'מתוק', 'טרופי', 'מר', 'פירותי', 'מכיל יין', 'הכל'],
+  he: ['חמוץ', 'חזק', 'מרענן', 'חריף', 'קלאסי', 'מתוק', 'טרופי', 'מר', 'פירותי', 'מכיל יין', 'אניס', 'הכל'],
   ru: [
     'кислый',
     'крепкий',
@@ -329,6 +343,7 @@ export const tags = {
     'горький',
     'фруктовый',
     'содержит вино',
+    'анис',
     'все'
   ],
   '': []
