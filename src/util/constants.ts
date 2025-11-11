@@ -22,7 +22,8 @@ export const cocktailImages = {
     'https://www.liquor.com/thmb/oDoPTN5eOOLdSE1lpYhfTRos5Vk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-white-and-night-720x720-primary-2504e8f315314e6fbfe980dccbc765a7.jpg',
   debbieDont:
     'https://images.squarespace-cdn.com/content/v1/62503525c8ea875b7ae0638e/1675706955754-DDFZOSMMUUHN3ACCJ6W1/Debbie+Don%27t+2.jpg',
-  copenhagen: 'https://i.ibb.co/TntfJwt/Copenhagen-96dpi-682x1024px-J-NR-9509-540x810.png'
+  copenhagen: 'https://i.ibb.co/TntfJwt/Copenhagen-96dpi-682x1024px-J-NR-9509-540x810.png',
+  ouzetta: 'https://www.thehungrybites.com/wp-content/uploads/2025/03/Simple-Lemon-ouzo-drink-featured.jpg'
 };
 
 export const ingredientImages = {
@@ -124,6 +125,13 @@ export const cocktailsPerLanguage: CockTailsPerLanguage = {
       ingredients: 'Reposado Tequila, Cynar, Lemon Juice and Maple Syrup',
       ingredientUrls: [ingredientImages.tequila, ingredientImages.cynar],
       tags: ['bitter']
+    },
+    {
+      name: 'Ouzetta',
+      imageUrl: cocktailImages.ouzetta,
+      ingredients: 'Arak Louiza, Orgeat and sour',
+      ingredientUrls: [],
+      tags: ['sour', 'refreshing', 'anise']
     }
   ],
   he: [
@@ -306,6 +314,7 @@ export const tags = {
     'bitter',
     'fruity',
     'contains wine',
+    'anise',
     'all'
   ],
   he: ['חמוץ', 'חזק', 'מרענן', 'חריף', 'קלאסי', 'מתוק', 'טרופי', 'מר', 'פירותי', 'מכיל יין', 'הכל'],
